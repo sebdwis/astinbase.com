@@ -1,4 +1,32 @@
 .song-control {
     position: absolute;
+    bottom: 10px;
+    left: calc(50% - 160px);
+    width: 320px;
+    height: 40px;
+    text-align: center;
+}
+
+.song-control * {
+    margin: 0 12px;
+}
+
+.song-control .play-pause:hover {
+    cursor: pointer;
+    color: lightcoral;
+}
+
+.duration-indicator {
+    position: fixed;
+    left: 0;
     bottom: 0;
+    height: 12px;
+    width: 100vw;
+    background-color: lightslategray;
+}
+
+.elapsed-bar { 
+    background-color: lightcoral;
+    height: 12px;
+    width: 20px;
 }

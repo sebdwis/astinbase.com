@@ -8,14 +8,14 @@
 }
 
 .album-title {
-    font-family: 'Bungee Shade', cursive;
     font-size: 26px;
     line-height: 38px;
 }
 
 .songs {
     font-family: 'Times New Roman', Times, serif;
-    margin-top: 32px;
+    margin-top: 20px;
+    font-size: 20px;
 }
 
 .song:hover {

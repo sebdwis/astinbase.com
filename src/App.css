@@ -3,12 +3,6 @@
     font-family: 'Times New Roman', Times, serif;
     position: relative;
     height: 100vh;
-}
-
-.songs {
-    font-family: 'Bungee Shade', cursive;
-    margin-top: 80px;
-    text-align: center;
-    font-weight: 800;
-    font-size: 26px;
+    display: flex;
+    flex-direction: column;
 }
