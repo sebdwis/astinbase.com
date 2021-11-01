@@ -1,0 +1,24 @@
+.music {
+    margin-top: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.album-title {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 26px;
+    line-height: 38px;
+}
+
+.songs {
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 32px;
+}
+
+.song:hover {
+    color: lightcoral;
+    cursor: pointer;
+}
