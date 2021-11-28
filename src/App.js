@@ -8,8 +8,6 @@ function App() {
 
   const [selectedSong, setSelectedSong] = useState();
 
-  selectedSong
-
   return (
     <div className="app">
       <Header />

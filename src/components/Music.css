@@ -16,6 +16,12 @@
     font-family: 'Times New Roman', Times, serif;
     margin-top: 20px;
     font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.song {
+    margin: 5px 0;
 }
 
 .song:hover {
