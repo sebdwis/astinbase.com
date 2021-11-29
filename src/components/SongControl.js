@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faPause, faFastBackward } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faPause, faVolumeMute, faVolumeUp, faRedoAlt } from '@fortawesome/free-solid-svg-icons';
 
 import './SongControl.css'
+import { Slider } from '@mui/material';
 
 const SongControl = ({ selectedSong }) => {
     const [songTitle, setSongTitle] = useState();
     const [audio, setAudio] = useState();
     const [elapsedTime, setElapsedTime] = useState(0);
-    const [paused, setPaused] = useState(false);
 
     useEffect(() => {
         if (!selectedSong) return;
@@ -16,12 +16,11 @@ const SongControl = ({ selectedSong }) => {
         if (selectedSong.name === songTitle) {
             seekSong(0);
         } else {
-            audio?.pause();
+            audio?.pause(); // pause currently playing audio
 
             const newAudio = new Audio(selectedSong.location);
             setElapsedTime(0);
             setSongTitle(selectedSong.name);
-            setPaused(false);
             
             newAudio.addEventListener('timeupdate', () => {
                 setElapsedTime(newAudio.currentTime);
@@ -39,40 +38,57 @@ const SongControl = ({ selectedSong }) => {
         return null;
     }
 
-    const togglePause = () => {
-        if (audio.currentTime == audio.duration) {
-          seekSong(0)
-        } else {
-            paused ? audio.play() : audio.pause();
-            setPaused(!paused);
-        } 
-    }
-
     const seekSong = (seekToTime) => {
         audio.currentTime = seekToTime;
         setAudio(audio);
     }
 
-    const icon = (audio.currentTime == audio.duration) ? 
-      faFastBackward : 
-      paused ? faPlay : faPause
+    const togglePause = () => {
+        if (audio.currentTime == audio.duration) {
+          seekSong(0)
+        } else {
+            audio.paused ? audio.play() : audio.pause();
+        }
+    }
+  
+    const getPlayIcon = () => {
+        if (audio.currentTime == audio.duration) {
+            return faRedoAlt;
+        }
+
+        return audio.paused ? faPlay : faPause
+    }
 
     const totalDuration = `${Math.floor(audio.duration / 60)}:${('' + Math.floor(audio.duration % 60)).padStart(2, 0)}`
     const formattedTime = `${Math.floor(elapsedTime / 60)}:${('' + Math.floor(elapsedTime % 60)).padStart(2, '0')} / ${totalDuration}`
 
     return (
         <div className="song-control-panel">
+            <div className="song-control-title">{songTitle}</div>
             <div className="song-control">
-                {songTitle}
-                <FontAwesomeIcon className="song-control-button" icon={icon} onClick={togglePause} />
-                <span>volume: {audio.volume}</span>
-                <span>time: {formattedTime}</span>
+                <FontAwesomeIcon className="song-control-button" 
+                                 icon={getPlayIcon()} 
+                                 onClick={togglePause} />
+                <FontAwesomeIcon className="song-control-button mute-button" 
+                                     icon={audio.muted ? faVolumeMute : faVolumeUp} 
+                                     onClick={() => {audio.muted = !audio.muted}} />
+                <Slider className="volume-slider"
+                        min={0} 
+                        max={1} 
+                        step={.01} 
+                        defaultValue={1}
+                        size="small"
+                        valueLabelDisplay="auto"
+                        valueLabelFormat={() => Math.floor(audio.volume * 100) + '%'}
+                        onChange={(e) => {audio.volume = e.target.value}} />
+                <span className="elapsed-text">time: {formattedTime}</span>
             </div>
-            <div className="duration-indicator" onClick={(e) => { seekSong((e.clientX / window.innerWidth) * audio.duration) }}>
-                <div className="elapsed-bar" style={{ width: `${(elapsedTime / audio.duration) * 100}vw` }} />
+            <div className="duration-indicator" 
+                 onClick={(e) => { seekSong((e.clientX / window.innerWidth) * audio.duration) }}>
+                <div className="elapsed-bar" 
+                     style={{ width: `${(elapsedTime / audio.duration) * 100}vw` }} />
             </div>
         </div>
     )
 }
-
 export default SongControl;

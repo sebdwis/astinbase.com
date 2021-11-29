@@ -8,20 +8,24 @@
 }
 
 .album-title {
-    font-size: 26px;
+    font-family: 'Bungee Shade';
+    color: lightcoral;
+    font-size: 38px;
     line-height: 38px;
 }
 
 .songs {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Bungee Shade';
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 24px;
     display: flex;
     flex-direction: column;
 }
 
 .song {
+    -webkit-text-stroke: 1px lightslategray; /* width and color */
     margin: 5px 0;
+    height: 40px;
 }
 
 .song:hover {

@@ -6,13 +6,17 @@
 }
 
 .title .astin-base {
-    font-family: 'Bungee Shade', cursive;
+    font-family: 'Bungee Shade';
     white-space: nowrap;
     color: lightcoral;
 }
 
 .title .noun {
     color: lightcoral;
+}
+
+.definition {
+    text-align: justify;
 }
 
 @media screen and (max-width: 600px) {
