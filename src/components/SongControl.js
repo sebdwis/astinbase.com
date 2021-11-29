@@ -5,10 +5,9 @@ import { faPlay, faPause, faVolumeMute, faVolumeUp, faRedoAlt } from '@fortaweso
 import './SongControl.css'
 import { Slider } from '@mui/material';
 
-const SongControl = ({ selectedSong }) => {
+const SongControl = ({ selectedSong, elapsedTime, setElapsedTime }) => {
     const [songTitle, setSongTitle] = useState();
     const [audio, setAudio] = useState();
-    const [elapsedTime, setElapsedTime] = useState(0);
 
     useEffect(() => {
         if (!selectedSong) return;
