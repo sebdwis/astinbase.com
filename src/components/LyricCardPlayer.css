@@ -1,0 +1,7 @@
+.lyric-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0 85px 0;
+    height: 30vh;
+}

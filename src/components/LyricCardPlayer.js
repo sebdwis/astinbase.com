@@ -37,7 +37,7 @@ const LyricCardPlayer = ({selectedSong, elapsedTime}) => {
     formattedLyrics.push((<div>{line}</div>))
   }
   
-  return (<div><p>{formattedLyrics}</p></div>) 
+  return (<div className="lyric-card">{formattedLyrics}</div>) 
 }
 
 export default LyricCardPlayer;

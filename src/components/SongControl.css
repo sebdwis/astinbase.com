@@ -1,13 +1,15 @@
 .song-control-panel {
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     left: calc(50% - 160px);
-    width: 320px; /* do 320px */
+    width: 320px;
     text-align: center;
     margin: 8px 0;
     border: #ec9d9d 1px solid;
+    background-color: #f7f7f7;
     border-radius: 10px;
     padding: 2px;
+    z-index: 999;
 }
 
 .song-control {
@@ -56,7 +58,7 @@
 
 .duration-indicator:hover {
     background-color: rgb(100, 110, 121);
-    height: 20px;
+    height: 22px;
     transition: height .25s
 } 
 

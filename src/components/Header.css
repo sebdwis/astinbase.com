@@ -1,9 +1,16 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .title { 
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
     user-select: none;
+    margin: 8px 0;
 }
 
 .title .astin-base {
@@ -18,9 +25,14 @@
 
 .definition {
     text-align: justify;
+    max-width: 800px;
 }
 
 @media screen and (max-width: 600px) {
+    .header {
+        margin-bottom: 10px;
+    }
+
     .title {
         font-size: 40px;
         height: 6vh;
@@ -43,6 +55,10 @@
 }
 
 @media screen and (min-width: 600px) {
+    .header {
+        margin-bottom: 20px;
+    }
+
     .title {
         font-size: 32px;
         height: 12vh;
