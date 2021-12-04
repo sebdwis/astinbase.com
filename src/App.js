@@ -4,6 +4,7 @@ import Header from './components/Header';
 import SongControl from './components/SongControl';
 import Music from './components/Music';
 import LyricCardPlayer from './components/LyricCardPlayer';
+import LinkIcons from './components/LinkIcons';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
     <div className="app">
       <Header />
       <Music setSelectedSong={setSelectedSong} />
+      <LinkIcons />
       <LyricCardPlayer selectedSong={selectedSong} elapsedTime={elapsedTime} />
       <SongControl selectedSong={selectedSong} setElapsedTime={setElapsedTime} elapsedTime={elapsedTime} />
     </div>

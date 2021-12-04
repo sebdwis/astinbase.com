@@ -3,7 +3,7 @@ import './Music.css'
 const Music = ({ setSelectedSong }) => {
     return (
         <div className="music">
-            <div className="album-title">Finding Homes Where There Were None</div>
+            <div className="album-title">Finding Homes Where There Are None</div>
             <div className="songs">
                 <a className="song" onClick={() => setSelectedSong({name: 'Vignette', lyricCard: 'Vignette', location: 'http://localhost:3000/media/Vignette.wav'})}>
                     Vignette

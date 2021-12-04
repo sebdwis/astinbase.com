@@ -1,0 +1,14 @@
+.link-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.link-icons > * {
+    margin: 0 8px;
+    color: lightslategray;
+}
+
+.link-icons > *:hover {
+    color: lightcoral;
+    cursor: pointer;
+}

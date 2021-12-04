@@ -1,11 +1,12 @@
 .music {
     margin-top: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    user-select: none;
 }
 
 .album-title {
@@ -17,7 +18,7 @@
 
 .songs {
     font-family: 'Bungee Shade';
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 24px;
     display: flex;
     flex-direction: column;
@@ -32,4 +33,18 @@
 .song:hover {
     color: lightcoral;
     cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .album-title {
+        font-size: 28px;
+        line-height: 28px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .album-title {
+        font-size: 38px;
+        line-height: 38px;
+    }
 }
