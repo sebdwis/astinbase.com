@@ -1,43 +1,86 @@
-import { useEffect, useState } from 'react';
-import './LyricCardPlayer.css'
+import { margin } from "@mui/system";
+import { useEffect, useState } from "react";
+import "./LyricCardPlayer.css";
 
-const LyricCardPlayer = ({selectedSong, elapsedTime}) => {
+class LyricEntry {
+  constructor([text, startTime, endTime, marginLeft]) {
+    this.text = text;
+    this.startTime = startTime;
+    this.endTime = endTime;
+    this.marginLeft = marginLeft;
+  }
+}
+
+const LyricCardPlayer = ({ selectedSong, elapsedTime, seekToTime }) => {
+  const [previousSeekToTime, setPreviousSeekToTime] = useState(0);
   const [lyricCard, setLyricCard] = useState();
   const [nextLyricIndex, setNextLyricIndex] = useState(0);
-  const [displayedText, setDisplayedText] = useState([]);
+  const [displayedLyrics, setDisplayedLyrics] = useState([]);
 
   useEffect(() => {
     if (selectedSong) {
-      const newLyricCard = require(`../lyric-cards/${selectedSong.lyricCard}.js`).default;
-      setDisplayedText([]);
-      setNextLyricIndex(0);
+      const newLyricCardRaw =
+        require(`../lyric-cards/${selectedSong.lyricCard}.js`).default;
+      const newLyricCard = newLyricCardRaw.map(
+        (rawEntry) => new LyricEntry(rawEntry)
+      );
       setLyricCard(newLyricCard);
+      setNextLyricIndex(0);
     }
-  }, [selectedSong])
+
+    setDisplayedLyrics([]);
+  }, [selectedSong]);
 
   useEffect(() => {
     if (lyricCard) {
-      const [lyricText, nextLyricStartTime] = lyricCard[nextLyricIndex];
+      const nextLyric = lyricCard[nextLyricIndex];
+      const newDisplayedLyrics = displayedLyrics.filter(
+        ({ endTime }) => endTime > elapsedTime
+      );
 
-      console.log(lyricText);
-
-      if (elapsedTime >= nextLyricStartTime) {
-        setDisplayedText([...displayedText, lyricText])
+      if (elapsedTime >= nextLyric.startTime) {
+        setDisplayedLyrics([...newDisplayedLyrics, nextLyric]);
         setNextLyricIndex(nextLyricIndex + 1);
+      } else {
+        setDisplayedLyrics[newDisplayedLyrics];
       }
     }
-  }, [elapsedTime])
+  }, [elapsedTime]);
+
+  useEffect(() => {
+    if (seekToTime !== previousSeekToTime) {
+      const newDisplayedLyrics = lyricCard.filter(
+        ({ startTime, endTime }) =>
+          startTime < seekToTime && endTime > seekToTime
+      );
+
+      const newNextLyricIndex = lyricCard.filter(
+        ({ startTime }) => startTime < seekToTime
+      ).length;
+
+      setDisplayedLyrics(newDisplayedLyrics);
+      setNextLyricIndex(newNextLyricIndex);
+      setPreviousSeekToTime(seekToTime);
+    }
+  }, [seekToTime]);
 
   if (!lyricCard) {
     return null;
   }
 
-  let formattedLyrics = []
-  for (const line of displayedText) {
-    formattedLyrics.push((<div>{line}</div>))
+  console.log(displayedLyrics);
+  let formattedLyrics = [];
+  for (const { text, marginLeft } of displayedLyrics) {
+    formattedLyrics.push(
+      <div style={marginLeft ? { marginLeft: `${marginLeft}px` } : {}}>
+        {text}
+      </div>
+    );
   }
-  
-  return (<div className="lyric-card">{formattedLyrics}</div>) 
-}
+
+  return !selectedSong ? null : (
+    <div className="lyric-card">{formattedLyrics}</div>
+  );
+};
 
 export default LyricCardPlayer;

@@ -12,7 +12,7 @@ const Music = ({ setSelectedSong, selectedSong }) => {
             <div className="songs">
                 {songs.map((song) => 
                     <a className="song" 
-                       onClick={() => setSelectedSong(song)} 
+                       onClick={() => selectedSong?.name === song.name ? setSelectedSong(null) : setSelectedSong(song)} 
                        style={selectedSong?.name === song.name ? {color: 'lightcoral'} : {}}>
                         {song.name}
                     </a>

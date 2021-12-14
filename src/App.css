@@ -1,7 +1,6 @@
 .app {
     margin: 0 15vw;
     font-family: 'Merriweather', 'Times New Roman', Times, serif;
-    position: relative;
     display: flex;
     flex-direction: column;
 }
@@ -14,7 +13,7 @@
 }
 
 .altered-background {
-    width: 100vw;
+    transition: background-color ease-in-out 10s;
     height: 100vh;
-    transition: background-color ease-in 10s;
+    width: 100vw;
 }
