@@ -21,8 +21,12 @@ function App() {
       style={alteredBgColor ? { backgroundColor: alteredBgColor } : {}}
     >
       <div className="app">
-        <Header />
-        <hr className="section-break" />
+        {!selectedSong && (
+          <div>
+            <Header selectedSong={selectedSong} />
+            <hr className="section-break" />
+          </div>
+        )}
         <Music setSelectedSong={setSelectedSong} selectedSong={selectedSong} />
         <hr className="section-break" />
         <LinkIcons />

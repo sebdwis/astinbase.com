@@ -69,7 +69,7 @@ const SongControl = ({
   };
 
   if (!audio) {
-      return null;
+    return null;
   }
 
   const totalDuration = `${Math.floor(audio.duration / 60)}:${(
@@ -79,8 +79,11 @@ const SongControl = ({
     "" + Math.floor(elapsedTime % 60)
   ).padStart(2, "0")} / ${totalDuration}`;
 
-  return !selectedSong ? null : (
-    <div className="song-control-panel">
+  return (
+    <div
+      className="song-control-panel"
+      style={{ opacity: selectedSong ? 1 : 0 }}
+    >
       <div className="song-control-title">{songTitle}</div>
       <div className="song-control">
         <FontAwesomeIcon

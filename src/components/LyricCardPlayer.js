@@ -3,11 +3,12 @@ import { useEffect, useState } from "react";
 import "./LyricCardPlayer.css";
 
 class LyricEntry {
-  constructor([text, startTime, endTime, marginLeft]) {
+  constructor([text, startTime, endTime, top, left]) {
     this.text = text;
     this.startTime = startTime;
     this.endTime = endTime;
-    this.marginLeft = marginLeft;
+    this.top = top;
+    this.left = left
   }
 }
 
@@ -70,9 +71,9 @@ const LyricCardPlayer = ({ selectedSong, elapsedTime, seekToTime }) => {
 
   console.log(displayedLyrics);
   let formattedLyrics = [];
-  for (const { text, marginLeft } of displayedLyrics) {
+  for (const { text, top, left } of displayedLyrics) {
     formattedLyrics.push(
-      <div style={marginLeft ? { marginLeft: `${marginLeft}px` } : {}}>
+      <div style={left && top ? { position: 'absolute', top: `${top}%`, left: `${left}%` } : {}}>
         {text}
       </div>
     );
