@@ -1,13 +1,12 @@
 .song-control-panel {
     position: fixed;
-    bottom: 20px;
-    left: calc(50% - 160px);
-    width: 320px;
+    bottom:32px;
+    left: calc(50% - 185px);
+    width: 340px;
     text-align: center;
     margin: 8px 0;
-    border: #ec9d9d 1px solid;
+    border: #ec9d9d 3px solid;
     background-color: #f7f7f7;
-    border-radius: 10px;
     padding: 2px;
     z-index: 999;
     transition: opacity .5s linear;
@@ -24,7 +23,10 @@
 
 .song-control-title {
     font-weight: bold;
+    font-size: 22px;
     margin-bottom: 4px;
+    font-family: 'Bungee Shade';
+    line-height: 1.5;
 }
 
 .song-control .song-control-button:hover {
@@ -51,7 +53,7 @@
     position: fixed;
     left: 0;
     bottom: 0;
-    height: 12px;
+    height: 20px;
     width: 100vw;
     background-color: lightslategray;
     transition: height .25s;
@@ -59,7 +61,7 @@
 
 .duration-indicator:hover {
     background-color: rgb(100, 110, 121);
-    height: 22px;
+    height: 28px;
     transition: height .25s
 } 
 
