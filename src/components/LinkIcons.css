@@ -13,3 +13,14 @@
     color: lightcoral;
     cursor: pointer;
 }
+
+.icon-disabled {
+    color: lightslategray;
+    opacity: 30%;
+}
+
+.icon-disabled:hover {
+    color: lightslategray;
+    opacity: 30%;
+    cursor: default;
+}

@@ -8,7 +8,7 @@ const Music = ({ setSelectedSong, selectedSong }) => {
 
     return (
         <div className="music">
-            <div className="album-title">Finding Homes Where There Are None</div>
+            <div className="album-title">Finding Homes Where There Were None</div>
             <div className="songs">
                 {songs.map((song) => 
                     <a className="song" 
@@ -18,6 +18,7 @@ const Music = ({ setSelectedSong, selectedSong }) => {
                     </a>
                 )}
             </div>
+            {!selectedSong && <div className="coming-soon">Summer 2022</div>}
         </div>
     )
 }

@@ -39,7 +39,7 @@ const LyricCardPlayer = ({ selectedSong, elapsedTime, seekToTime }) => {
         ({ endTime }) => endTime > elapsedTime
       );
 
-      if (elapsedTime >= nextLyric.startTime) {
+      if (elapsedTime >= nextLyric?.startTime) {
         setDisplayedLyrics([...newDisplayedLyrics, nextLyric]);
         setNextLyricIndex(nextLyricIndex + 1);
       } else {
@@ -69,18 +69,17 @@ const LyricCardPlayer = ({ selectedSong, elapsedTime, seekToTime }) => {
     return null;
   }
 
-  console.log(displayedLyrics);
   let formattedLyrics = [];
   for (const { text, top, left } of displayedLyrics) {
     formattedLyrics.push(
-      <div style={left && top ? { position: 'absolute', top: `${top}%`, left: `${left}%` } : {}}>
-        {text}
+      <div style={top ? { position: 'absolute', top: `${top}%`, whiteSpace: 'nowrap'} : {}}>
+        {text} 
       </div>
     );
   }
 
   return !selectedSong ? null : (
-    <div className="lyric-card">{formattedLyrics}</div>
+    <div className="lyric-card lyric-card-font">{formattedLyrics}</div>
   );
 };
 

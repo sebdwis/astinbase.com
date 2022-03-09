@@ -1,26 +1,37 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSpotify, faSoundcloud, faBandcamp, faApple, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSpotify,
+  faSoundcloud,
+  faBandcamp,
+  faApple,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
-import './LinkIcons.css';
+import "./LinkIcons.css";
 
-const LinkIcons = ({ }) => {
-    const iconLinks = [
-        { icon: faSpotify, href: 'http://localhost:3000' },
-        { icon: faSoundcloud, href: 'http://localhost:3000' },
-        { icon: faApple, href: 'http://localhost:3000' },
-        { icon: faInstagram, href: 'http://localhost:3000' },
-        { icon: faTwitter, href: 'http://localhost:3000' }
-    ];
+const LinkIcons = ({}) => {
+  const iconLinks = [
+    { icon: faSpotify, href: "#", disabled: true },
+    { icon: faSoundcloud, href: "https://soundcloud.com/astinbase" },
+    { icon: faApple, href: "#", disabled: true },
+    { icon: faInstagram, href: "https://www.instagram.com/astin.base/" },
+    { icon: faTwitter, href: "https://twitter.com/AstinBase" },
+  ];
 
-    return (
-        <div className="link-icons">
-            {iconLinks.map(({icon, href}) => 
-                <a href={href}>
-                    <FontAwesomeIcon icon={icon} size="2x" />
-                </a>
-            )}
-        </div>
-    )
-}
+  return (
+    <div className="link-icons">
+      {iconLinks.map(({ icon, href, disabled }) => (
+        <a
+          href={disabled ? null : href}
+          target="_blank"
+          className={disabled ? "icon-disabled" : ""}
+        >
+          <FontAwesomeIcon icon={icon} size="2x" />
+        </a>
+      ))}
+    </div>
+  );
+};
 
 export default LinkIcons;

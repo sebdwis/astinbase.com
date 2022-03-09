@@ -21,17 +21,21 @@ function App() {
       style={alteredBgColor ? { backgroundColor: alteredBgColor } : {}}
     >
       <div className="app">
-        {!selectedSong && (
-          <div>
-            <Header selectedSong={selectedSong} />
-            <hr className="section-break" />
-          </div>
-        )}
-        <Music setSelectedSong={setSelectedSong} selectedSong={selectedSong} />
-        <hr className="section-break" />
-        <LinkIcons />
-        <hr className="section-break" />
-        <SongPlayer selectedSong={selectedSong} />
+        <div className="heading-margin">
+          {!selectedSong && (
+            <div>
+              <Header selectedSong={selectedSong} />
+              <hr className="section-break" />
+            </div>
+          )}
+          <Music setSelectedSong={setSelectedSong} selectedSong={selectedSong} />
+          <hr className="section-break" />
+          <LinkIcons />
+          <hr className="section-break" />
+        </div>
+        <div className="song-player">
+          <SongPlayer selectedSong={selectedSong} />
+        </div>
       </div>
     </div>
   );

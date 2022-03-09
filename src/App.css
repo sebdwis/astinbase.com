@@ -1,8 +1,13 @@
 .app {
-    margin: 0 15vw;
     font-family: 'Merriweather', 'Times New Roman', Times, serif;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.song-player {
+    max-width: 500px;
+    width: 100%;
 }
 
 .section-break {
@@ -16,4 +21,16 @@
     transition: background-color ease-in-out 10s;
     height: 100vh;
     width: 100vw;
+}
+
+@media screen and (max-width: 600px) {
+    .heading-margin {
+        margin: 0 5vw;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .heading-margin {
+        margin: 0 15vw;
+    }
 }
