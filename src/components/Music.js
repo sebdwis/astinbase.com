@@ -2,8 +2,8 @@ import './Music.css'
 
 const Music = ({ setSelectedSong, selectedSong }) => {
     const songs = [
-        {name: 'Vignette', lyricCard: 'Vignette', location: 'http://192.168.1.201:3000/media/Vignette.wav'},
-        {name: 'Round and Blue', lyricCard: 'RoundAndBlue', location: 'http://192.168.1.201:3000/media/RoundAndBlue.wav'}
+        {name: 'Vignette', lyricCard: 'Vignette', location: 'http://astinbase.com.s3-website-us-east-1.amazonaws.com/media/Vignette.wav'},
+        {name: 'Round and Blue', lyricCard: 'RoundAndBlue', location: 'http://astinbase.com.s3-website-us-east-1.amazonaws.com/media/RoundAndBlue.wav'}
     ]
 
     return (

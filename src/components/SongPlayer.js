@@ -6,8 +6,8 @@ const SongPlayer = ({ selectedSong }) => {
   const [elapsedTime, setElapsedTime] = useState(0);
   const [seekToTime, setSeekToTime] = useState(0);
 
-  return (
-    <div>
+  return !selectedSong ? null : (
+    <div className="song-player">
       <LyricCardPlayer
         selectedSong={selectedSong}
         elapsedTime={elapsedTime}
