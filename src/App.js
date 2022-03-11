@@ -28,8 +28,12 @@ function App() {
           </div>
         )}
         <Music setSelectedSong={setSelectedSong} selectedSong={selectedSong} />
-        <hr className="section-break" />
-        <LinkIcons />
+        {!selectedSong && (
+          <div>
+            <hr className="section-break" />
+            <LinkIcons />
+          </div>
+        )}
         <SongPlayer selectedSong={selectedSong} />
       </div>
     </div>

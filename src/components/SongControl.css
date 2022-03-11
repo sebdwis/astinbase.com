@@ -9,7 +9,7 @@
     background-color: #f7f7f7;
     padding: 2px;
     z-index: 999;
-    transition: opacity .5s linear;
+    transition: opacity .2s linear;
 }
 
 .song-control {
