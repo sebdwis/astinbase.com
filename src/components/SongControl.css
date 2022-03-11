@@ -27,6 +27,7 @@
     margin-bottom: 4px;
     font-family: 'Bungee Shade';
     line-height: 1.5;
+    user-select: none;
 }
 
 .song-control .song-control-button:hover {
@@ -46,6 +47,7 @@
 
 .elapsed-text {
     width: 132px;
+    user-select: none;
 }
 
 .duration-indicator {
@@ -64,7 +66,6 @@
     height: 28px;
     transition: height .25s
 } 
-
 
 .elapsed-bar { 
     background-color: lightcoral;

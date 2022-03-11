@@ -1,9 +1,14 @@
 .app {
     font-family: 'Merriweather', 'Times New Roman', Times, serif;
+    margin-bottom: 36px;
+}
+
+.bg-song-playing.altered-background {
+    align-items: normal;
 }
 
 .song-player {
-    max-width: 500px;
+    max-width: 700px;
     width: 100%;
 }
 
@@ -22,4 +27,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+@media only screen and (min-height: 800px) {
+    .app {
+        margin-top: 40px;
+    }
 }

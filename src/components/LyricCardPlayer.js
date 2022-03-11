@@ -72,7 +72,7 @@ const LyricCardPlayer = ({ selectedSong, elapsedTime, seekToTime }) => {
   let formattedLyrics = [];
   for (const { text, top, left } of displayedLyrics) {
     formattedLyrics.push(
-      <div style={top ? { position: 'absolute', top: `${top}%`, whiteSpace: 'nowrap'} : {}}>
+      <div style={top ? { position: 'absolute', top: `${top}%`} : {}}>
         {text} 
       </div>
     );

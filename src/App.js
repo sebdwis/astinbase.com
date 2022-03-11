@@ -17,13 +17,13 @@ function App() {
 
   return (
     <div
-      className="altered-background"
+      className={`${selectedSong ? 'bg-song-playing' : ''} altered-background`}
       style={alteredBgColor ? { backgroundColor: alteredBgColor } : {}}
     >
       <div className="app">
         {!selectedSong && (
           <div>
-            <Header selectedSong={selectedSong} />
+            <Header />
             <hr className="section-break" />
           </div>
         )}
