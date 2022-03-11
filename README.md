@@ -31,7 +31,7 @@ You can take a look I guess.
 
 
 
-It'd probably look cooler if you just went to astinbase.com.
+It'd probably look cooler if you just went to [astinbase.com](http://www.astinbase.com).
 
 
 
