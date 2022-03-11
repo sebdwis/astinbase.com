@@ -24,17 +24,17 @@
 
 .definition {
     text-align: justify;
-    max-width: 700px;
+    max-width: 600px;
     padding: 5px 30px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
     .header {
         margin-bottom: 10px;
     }
 
     .title {
-        height: 6vh;
+        height: 4vh;
     }
 
     .title .astin-base {
@@ -49,31 +49,74 @@
 
     .definition {
         margin-top: 12px;
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 400px) and (max-width: 600px) {
+    .title {
+        height: 8vh;
+    }
+
+    .title .astin-base {
+        font-size: 48px;
+    }
+
+    .title .noun {
+        font-size: 18px;
+        margin-top: 24px;
+        margin-left: 6px;
+    }
+
+    .definition {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
     .header {
         margin-bottom: 20px;
     }
 
     .title {
         font-size: 32px;
+        height: 10vh;
+    }
+
+    .title .astin-base {
+        font-size: 72px;
+    }
+
+    .title .noun {
+        font-size: 24px;
+        margin-top: 40px;
+        margin-left: 10px;
+    }
+
+    .definition {
+        font-size: 18px;
+        max-width: 500px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .title {
         height: 12vh;
     }
 
     .title .astin-base {
-        font-size: 68px;
+        font-size: 92px;
     }
 
     .title .noun {
-        margin-top: 30px;
+        font-size: 30px;
+        margin-top: 46px;
         margin-left: 12px;
     }
 
     .definition {
+        margin-top: 6px;
         font-size: 22px;
+        max-width: 650px;
     }
 }
-

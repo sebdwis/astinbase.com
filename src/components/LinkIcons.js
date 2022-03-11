@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSpotify,
@@ -10,6 +11,17 @@ import {
 import "./LinkIcons.css";
 
 const LinkIcons = ({}) => {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+  };
+  
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
   const iconLinks = [
     { icon: faSpotify, href: "#", disabled: true },
     { icon: faSoundcloud, href: "https://soundcloud.com/astinbase" },
@@ -26,7 +38,7 @@ const LinkIcons = ({}) => {
           target="_blank"
           className={disabled ? "icon-disabled" : ""}
         >
-          <FontAwesomeIcon icon={icon} size="2x" />
+          <FontAwesomeIcon icon={icon} size={width > 600 ? "3x" : "2x"} />
         </a>
       ))}
     </div>

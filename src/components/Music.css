@@ -55,6 +55,7 @@
     .album-title {
         font-size: 32px;
         line-height: 32px;
+        margin: 0 10px;
     }
 
     .songs {
@@ -66,7 +67,7 @@
     }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) and (max-width: 800px) {
     .music {
         margin: 20px 0;
     }
@@ -84,4 +85,28 @@
         font-size: 32px;
     }
 
+}
+
+@media screen and (min-width: 800px) {
+    .music {
+        margin: 20px 0;
+    }
+
+    .album-title {
+        font-size: 46px;
+        line-height: 46px;
+    }
+
+    .songs {
+        font-size: 38px;
+    }
+
+    .song {
+        margin: 15px 0;
+    }
+
+    .coming-soon {
+        font-size: 38px;
+        margin: 15px 0;
+    }
 }
