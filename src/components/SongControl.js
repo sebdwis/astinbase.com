@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPlay,
@@ -20,7 +20,7 @@ const SongControl = ({
   const [songTitle, setSongTitle] = useState();
   const [audio, setAudio] = useState();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!selectedSong) {
       if (audio) audio.pause();
       return;

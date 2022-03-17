@@ -36,7 +36,7 @@ const RoundAndBlue = [
     ["Such a purpose-driven alloy", 88.5, 105, 0],
     ["Stuck in the notion", 92.6, 105, 10],
     ["Of artificial motion", 94.3, 105, 20],
-    ["Has it ever crossed your mind to", 97, 105, 40],
+    ["Has it even crossed your mind to", 97, 105, 40],
     ["Give thanks and release", 100.6, 105, 50],
     ["To the earth that gave you peace?", 102.8, 105, 60],
     ["Not even", 105, 114.4, 0],

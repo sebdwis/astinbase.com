@@ -1,7 +1,7 @@
 .link-icons {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
 .link-icons > * {
@@ -16,7 +16,7 @@
 
 .icon-disabled {
     color: lightslategray;
-    opacity: 25%;
+    opacity: .25;
 }
 
 .icon-disabled:hover {
