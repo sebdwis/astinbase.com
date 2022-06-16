@@ -23,9 +23,9 @@ const LinkIcons = ({}) => {
   }, []);
 
   const iconLinks = [
-    { icon: faSpotify, href: "#", disabled: true },
+    { icon: faSpotify, href: "https://open.spotify.com/artist/03fDMLCW2qZGMhFKM31vRN?si=5yAJGE07R_WqGvuQJZjyUQ" },
     { icon: faSoundcloud, href: "https://soundcloud.com/astinbase" },
-    { icon: faApple, href: "#", disabled: true },
+    { icon: faApple, href: "https://music.apple.com/us/artist/astin-base/1629735305" },
     { icon: faInstagram, href: "https://www.instagram.com/astin.base/" },
     { icon: faTwitter, href: "https://twitter.com/AstinBase" },
   ];
