@@ -6,6 +6,7 @@ import {
   faApple,
   faInstagram,
   faTwitter,
+  faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
 
 import "./LinkIcons.css";
@@ -16,7 +17,7 @@ const LinkIcons = ({}) => {
   const updateDimensions = () => {
     setWidth(window.innerWidth);
   };
-  
+
   useEffect(() => {
     window.addEventListener("resize", updateDimensions);
     return () => window.removeEventListener("resize", updateDimensions);
@@ -27,7 +28,7 @@ const LinkIcons = ({}) => {
     { icon: faSoundcloud, href: "https://soundcloud.com/astinbase" },
     { icon: faApple, href: "https://music.apple.com/us/artist/astin-base/1629735305" },
     { icon: faInstagram, href: "https://www.instagram.com/astin.base/" },
-    { icon: faTwitter, href: "https://twitter.com/AstinBase" },
+    { icon: faTiktok, href: "https://www.tiktok.com/@astinbase" },
   ];
 
   return (
