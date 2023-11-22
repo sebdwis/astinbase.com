@@ -1,16 +1,16 @@
 .link-icons {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
 }
 
-.link-icons > * {
+.link-icons>* {
     margin: 0 8px;
-    color: lightslategray;
+    color: var(--main-font-color);
+    ;
 }
 
-.link-icons > *:hover {
-    color: lightcoral;
+.link-icons>*:hover {
+    color: var(--title-font-color);
     cursor: pointer;
 }
 

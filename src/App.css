@@ -15,7 +15,9 @@
     width: 60px;
     margin-top: 10px;
     margin-bottom: 10px;
-    color: lightslategray;
+    height: 2px;
+    background-color: var(--main-font-color);
+    border: none;
 }
 
 .altered-background {
@@ -26,7 +28,8 @@
     justify-content: center;
 }
 
-html, body, #root {
+html,
+body,
+#root {
     height: 100%;
 }
-

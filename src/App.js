@@ -1,7 +1,8 @@
 import "./App.css";
 import { useState } from "react";
+import Background from "./components/Background";
 import Header from "./components/Header";
-import Music from "./components/Music";
+import AlbumAnnounce from "./components/AlbumAnnounce";
 import LinkIcons from "./components/LinkIcons";
 import SongPlayer from "./components/SongPlayer";
 
@@ -21,16 +22,18 @@ function App() {
       style={alteredBgColor ? { backgroundColor: alteredBgColor } : {}}
     >
       <div className="app">
+        <Background />
         {!selectedSong && (
           <div>
             <Header />
             <hr className="section-break" />
           </div>
         )}
-        <Music setSelectedSong={setSelectedSong} selectedSong={selectedSong} />
+        <AlbumAnnounce />
+        {/* <Music setSelectedSong={setSelectedSong} selectedSong={selectedSong} /> */}
         {!selectedSong && (
           <div>
-            <hr className="section-break" />
+            {/* <hr className="section-break" /> */}
             <LinkIcons />
           </div>
         )}

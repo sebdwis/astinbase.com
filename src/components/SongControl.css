@@ -1,6 +1,6 @@
 .song-control-panel {
     position: fixed;
-    bottom:32px;
+    bottom: 32px;
     left: calc(50% - 176px);
     width: 340px;
     text-align: center;
@@ -17,7 +17,7 @@
     justify-content: center;
 }
 
-.song-control > * {
+.song-control>* {
     margin: 0 10px;
 }
 
@@ -65,9 +65,9 @@
     background-color: rgb(100, 110, 121);
     height: 28px;
     transition: height .25s
-} 
+}
 
-.elapsed-bar { 
+.elapsed-bar {
     background-color: lightcoral;
     width: 20px;
     height: 100%;

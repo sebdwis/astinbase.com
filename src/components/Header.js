@@ -1,25 +1,28 @@
 import "./Header.css";
 
 const headerList = [
-  `An exploration of movement within from within - especially the act of sharing it. 
-  A vulnerable collection of infinite reassurances irrationally tempered with doubt 
-  and conceit. Hopefully disconnected from what it represents.
-  Hopefully celebrated and enjoyed, but comfortable in obscurity and scrutiny.`,
+  `An exploration of movement within from within - especially the act of sharing it.
+  A collection of infinite reassurances irrationally tempered with doubt and conceit. 
+  Hopefully disconnected from what it represents. Hopefully celebrated and enjoyed, 
+  but comfortable in obscurity and scrutiny.`,
   `The prolonging of the inevitable, as well as basking in its approach. Peering
   under the surface of what is familiar and amplifying it. Encoding severity in a
-  language universal. Begrudgingly announcing these parables over algorithmically
-  weathered channels.`,
-  `A boy, rotating in a quiet field, innately cracked, and folded clean a million
-  times. His need to hold on and his longing for silver hours. A hopefully ephemeral
-  reflection and a projection, shared by seeming opposites - perhaps not just by a boy.`,
-  `Endlessly devoted to curtains and bed sheets. Programmed and determined to bore
-  by day three. It even made sure that foresight was sworn to never dance again.`,
-  `Sitting close on electric mobile homes,
-  it being a distance felt too far. The loneliest of creatures stuffed inside a
-  red box car. A weary speaker box making osmosis, for weary travelers off to focus -
-  somehow relieved to be shuffling once more.`,
-  `The act of digging a hole in the ground, and filling it with whatever you want.
-  If you're rich you fill it in with gold, if you're poor you kick the dirt back in.`,
+  language deemed universal and begrudgingly announcing resulting parables over 
+  algorithmically weathered channels.`,
+  `A hopefully ephemeral reflection and a projection, shared by seeming opposites.
+  Anticipation of their synchronicity, affirming capricious beliefs into unwanted 
+  loyalty.`,
+  `A state endlessly devoted to curtains and covers. Programmed and determined to 
+  dissolve by day three. It tries to ensure foresight never dances again - 
+  especially if the result is quietly subsumed into the congealing passive, teeming 
+  with strikes and scribbles.`,
+  `An artificially fuelled system, one that adapts to various sources suddenly and 
+  vivaciously. Subtle signs of distress appear rapidly upon stasis, of which the 
+  inertia to can produce unexpected manifestations of understanding and revelation.`,
+  `Pretentious sonic poetry aimed at invigorating a purportedly disconnected society. 
+  The hope of encountering mirrors on the opposite end to bridge gaps, justifying 
+  insidious forays into the past and discovery of its rigidness. In its maturity, it 
+  is self-awareness to the degree of lacking it.`
 ];
 
 const headerIdx = Math.floor(Math.random() * headerList.length);

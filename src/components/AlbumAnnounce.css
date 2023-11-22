@@ -1,4 +1,4 @@
-.music {
+.album-announce {
     display: flex;
     text-align: center;
     align-items: center;
@@ -9,7 +9,7 @@
 
 .album-title {
     font-family: 'Bungee Shade';
-    color: var(--main-font-color);
+    color: var(--title-font-color);
     font-size: 38px;
     line-height: 38px;
     max-width: 600px;
@@ -17,64 +17,38 @@
 }
 
 .coming-soon {
-    font-family: 'Bungee Shade';
     color: var(--main-font-color);
     text-align: center;
-    font-size: 24px;
+    font-size: 26px;
     line-height: 36px;
     white-space: nowrap;
-    -webkit-text-stroke: 0.2px lightslategray;
-    /* width and color */
-    margin: 5px 0 8px 0;
-}
-
-.songs {
-    font-family: 'Bungee Shade';
-    margin-top: 20px;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.song {
-    /* width and color */
-    -webkit-text-stroke: 1px var(--main-font-color);
-    margin: 5px 0;
-    height: 40px;
-    line-height: 28px;
-}
-
-.song:hover {
-    color: lightcoral;
-    cursor: pointer;
+    margin: 20px 0 18px 0;
+    padding-top: 10px;
 }
 
 @media screen and (max-width: 600px),
 screen and (max-height: 650px) {
-    .music {
-        margin: 10px 0;
+    .album-announce {
+        margin: 10px 0 6px 0;
     }
 
     .album-title {
         font-size: 32px;
         line-height: 32px;
-        margin: 4px 10px 0 10px;
+        margin: 12px 12px 0 12px;
 
-    }
-
-    .songs {
-        font-size: 30px;
     }
 
     .coming-soon {
-        font-size: 30px;
+        font-size: 34px;
+        padding-top: 0;
     }
 }
 
 @media screen and (min-width: 600px) and (max-width: 800px) and (min-height: 650px),
 screen and (min-width: 800px) and (min-height: 650px) and (max-height: 850px) {
-    .music {
-        margin: 20px 0;
+    .album-announce {
+        margin: 20px 0 12px 0;
     }
 
     .album-title {
@@ -82,19 +56,16 @@ screen and (min-width: 800px) and (min-height: 650px) and (max-height: 850px) {
         line-height: 38px;
     }
 
-    .songs {
-        font-size: 32px;
-    }
-
     .coming-soon {
-        font-size: 32px;
+        font-size: 40px;
+        padding-top: 6px;
     }
 
 }
 
 @media screen and (min-width: 800px) and (min-height: 850px) {
-    .music {
-        margin: 20px 0;
+    .album-announce {
+        margin: 16px 0 12px 0;
     }
 
     .album-title {
@@ -102,16 +73,8 @@ screen and (min-width: 800px) and (min-height: 650px) and (max-height: 850px) {
         line-height: 46px;
     }
 
-    .songs {
-        font-size: 38px;
-    }
-
-    .song {
-        margin: 15px 0;
-    }
-
     .coming-soon {
-        font-size: 38px;
+        font-size: 40px;
         margin: 15px 0;
     }
 }

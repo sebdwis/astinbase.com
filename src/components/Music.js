@@ -36,7 +36,7 @@ const Music = ({ setSelectedSong, selectedSong }) => {
           </a>
         ))}
       </div>
-      {!selectedSong && <div className="coming-soon">Coming 2023</div>}
+      {!selectedSong && <div className="coming-soon">December 2023</div>}
     </div>
   );
 };
